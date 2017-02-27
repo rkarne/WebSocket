@@ -54,10 +54,10 @@ public class Logindetails   implements Serializable{
     }
 
     public String dologin() {
-        
+        String pass = HashCredentials.hashPassword(password);
         for (Userdetails use : Userlist.getInstance().getUsers()) {
             if (username.equals(use.getUsername())
-                    && password.equals(use.getPassword())) {
+                    && pass.equals(use.getPassword())) {
                 status = true;
                 user = use;
                 return "index";
