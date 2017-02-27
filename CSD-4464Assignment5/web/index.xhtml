@@ -20,10 +20,10 @@
                     #{postdetails.createdTime.toLocaleString()}
                 </h:column>
             </h:dataTable>
-            <c:if test="#{login.status}">
+            <c:if test="#{logindetails.status}">
                 <h:commandButton value="Add New" action="#{postlist.addPost()}" />
             </c:if>
-            <c:if test="#{!login.status}">
+            <c:if test="#{!logindetails.status}">
                 <h:button value="Login" outcome="login" />
             </c:if>
         </h:form>

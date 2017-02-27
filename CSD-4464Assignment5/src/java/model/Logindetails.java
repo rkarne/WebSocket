@@ -68,8 +68,5 @@ public class Logindetails   implements Serializable{
         status = false;
         return "index";
     }
-
-    
-     
-     
+   
 }
