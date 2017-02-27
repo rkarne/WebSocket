@@ -11,10 +11,10 @@
         <p>By #{users.getUsernameById(postlist.currentPost.user_id)} at #{postlist.currentPost.createdTime.toLocaleString()}</p>
         <p>#{postlist.currentPost.contents}</p>
         <h:form>            
-            <c:if test="#{login.loggedIn}">
-                <h:commandButton value="Edit" action="#{posts.editPost()}" />
+            <c:if test="#{logindetails.status}">
+                <h:commandButton value="Edit" action="#{postlist.editPost()}" />
             </c:if>
-            <c:if test="#{!login.loggedIn}">
+            <c:if test="#{!logindetails.status}">
                 <h:button value="Login" outcome="login" />
             </c:if>
             <h:button value="Return" outcome="index" />
