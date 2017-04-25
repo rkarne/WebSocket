@@ -13,6 +13,7 @@
         <h:form>            
             <c:if test="#{logindetails.status}">
                 <h:commandButton value="Edit" action="#{postlist.editPost()}" />
+                 <h:commandButton value="Delete" action="#{postlist.editPost()}" />
             </c:if>
             <c:if test="#{!logindetails.status}">
                 <h:button value="Login" outcome="login" />

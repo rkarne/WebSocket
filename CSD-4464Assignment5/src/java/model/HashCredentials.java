@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author c0689497
+ * @author Roja Jayashree Karne
  */
 public class HashCredentials {
     public final static String SALT = "THISISArandomSTRINGofCHARACTERSusedTOsaltTHEpasswords";
