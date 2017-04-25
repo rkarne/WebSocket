@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <script src="https://code.jquery.com/jquery.min.js"> </script>
+        <script>
+             $(document).ready(function(){
+               $.ajax({
+                   url: 'api/json',
+                   method: 'get',
+                   dataType: 'json',
+               success: function(data){
+                    $('#id').html(data.id);
+                    $('#name').html(data.name);
+                }
+                });
+             
+            });
+            
+              // $(document).ready(function(){
+                //$getJSON('api/json', function(data){
+                   // $('id').html(data.id);
+                   // $('name').html(data.name);
+               // });
+          //  });
+            </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <div id="id"></div>
+        <div id="name"></div>
+    </body>
+</html>
